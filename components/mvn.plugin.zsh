@@ -1,11 +1,15 @@
+# 移除 alias 和函数，确保自定义 mvn 生效
+unalias mvn 2>/dev/null
+unfunction mvn 2>/dev/null
+
 # 设置 Maven 配置 profile
 function mvnkj() {
   export MAVEN_SETTINGS_PROFILE=kj
   echo "已切换到 settings-kj.xml 配置文件"
 }
 function mvnbank() {
-  export MAVEN_SETTINGS_PROFILE=kj
-  echo "已切换到 settings-kj.xml 配置文件"
+  export MAVEN_SETTINGS_PROFILE=bank
+  echo "已切换到 settings-bank.xml 配置文件"
 }
 function mvnmaven() {
   export MAVEN_SETTINGS_PROFILE=maven
